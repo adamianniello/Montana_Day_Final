@@ -1,0 +1,452 @@
+/* 
+Project Name: Montana Day
+Client: Your Client
+Author: Your Name
+Developer @GA in NYC
+*/
+
+
+/******************************************
+/* SETUP                   
+/*******************************************/
+
+/* Box Model Hack */
+* {
+     -moz-box-sizing: border-box; /* Firexfox */
+     -webkit-box-sizing: border-box; /* Safari/Chrome/iOS/Android */
+     box-sizing: border-box; /* IE */
+}
+
+/* Clear fix hack */
+.clearfix:after {
+     content: ".";
+     display: block;
+     clear: both;
+     visibility: hidden;
+     line-height: 0;
+     height: 0;
+}
+
+.clear {
+	clear: both;
+}
+
+.alignright {
+	float: right; 
+	padding: 0 0 10px 10px; /* note the padding around a right floated image */
+}
+
+.alignleft {
+	float: left; 
+	padding: 0 10px 10px 0; /* note the padding around a left floated image */
+}
+
+/******************************************
+/* BASE STYLES                   
+/*******************************************/
+
+body {
+     color: #000;
+     font-size: 12px;
+     line-height: 1.4;
+     font-family: 'Short Stack';
+     margin:0px;
+     background-color: black;
+}
+
+/******************************************
+/* LAYOUT                   
+/*******************************************/
+
+/******************************************
+/* Background Video                    
+/*******************************************/
+
+
+
+
+.fullscreen-bg {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  overflow: hidden;
+  z-index: -100;
+}
+ 
+.fullscreen-bg__video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+@media (min-aspect-ratio: 16/9) {
+  .fullscreen-bg__video {
+    height: 300%;
+    top: -100%;
+  }
+}
+ 
+@media (max-aspect-ratio: 16/9) {
+  .fullscreen-bg__video {
+    width: 300%;
+    left: -100%;
+  }
+}
+
+
+
+
+/*=========================
+  Navigation
+ ================= */
+
+
+.navicon {
+     display:inline-block;
+     width: 100%;
+     margin-top: 3%;
+    -webkit-filter: invert(1);
+     filter: invert(1);
+     
+     
+}
+
+
+
+
+.navicon img.info{
+     height:70px;
+     float: left;
+     margin-left: 5%;
+     opacity: .7;
+     
+
+}
+
+.navicon img.social{
+     height:55px;
+     float:right;
+     margin-right: 5%;
+     opacity: .7;
+    
+}
+
+.navicon img.social:hover, .navicon img.info:hover{
+     opacity: 1;
+}
+
+@media screen and (max-width:400px){
+     .navicon img.info{
+     height:90px;
+     
+}
+
+.navicon img.social{
+     height:70px;
+     
+}
+
+}
+
+
+
+/* Right Sidebar Info*/
+
+
+
+.info-sidebar{
+     float:left;
+     width: 35%;
+     padding-left: 2%;
+     padding-right: 2%;
+     border-radius: 7%;
+     color:white;
+     margin-top: 0%;
+     margin-left: 35%;
+     display:none;
+     text-align: center;
+     font:1em;
+     font-family: 'Short Stack';
+     background-color:rgba(192,192,192,0.5);
+ }
+
+
+
+.info-sidebar h1{
+     font-size: 3em;
+     color:white;
+     
+}
+
+.info-sidebar h2{
+     font-size: 1em;
+     color:white;
+     
+}
+
+.info-sidebar h3{
+     font-size: 3em;
+     color:white;
+     
+}
+
+.info-sidebar p{
+     font-size: 1em;
+     color:white;
+     font-weight: bold;
+     background-color: 
+     
+
+}
+
+.info-sidebar p:hover{
+     color:;
+     
+     
+
+}
+
+
+.info-sidebar img{
+     width: 100%;
+     height:100%;
+     border-radius: 50%;
+     opacity: 1;
+     
+}
+
+a.close-sidebar {
+    color:white;
+    font-size: 1.5em;
+}
+
+a.close-sidebar:hover{
+    color:blue;
+}
+
+@media screen and (max-width:500px) {
+
+     .info-sidebar{
+     width: 45%;
+     padding-left: 3%;
+     padding-right: 3%;
+
+}
+
+.info-sidebar h1{
+     font-size: 2em;
+     
+}
+
+.info-sidebar h2{
+     font-size: 1em;
+     
+}
+
+.info-sidebar h3{
+     font-size: 2em;
+     
+}
+
+
+}
+
+
+/* Left Sidebar social icons*/
+
+ul.social-network {
+     list-style: none;  
+     margin-top: 1%;
+     margin-left:0 !important;
+     margin-right: 4%;
+     padding: 0;
+     float:right;
+     display:none;
+
+}
+
+ul.social-network li {
+     display: block;
+     margin: 0 5px;
+
+}
+
+
+/* footer social icons */
+.social-network a.icoRss:hover {
+     background-color: #F56505;
+}
+.social-network a.icoFacebook:hover {
+     background-color:#3B5998;
+}
+.social-network a.icoTwitter:hover {
+     background-color:#33ccff;
+}
+.social-network a.icoGoogle:hover {
+     background-color:#BD3518;
+}
+.social-network a.icoVimeo:hover {
+     background-color:#0590B8;
+}
+.social-network a.icoLinkedin:hover {
+     background-color:#007bb7;
+}
+.social-network a.icoRss:hover i, .social-network a.icoFacebook:hover i, .social-network a.icoTwitter:hover i,
+.social-network a.icoGoogle:hover i, .social-network a.icoVimeo:hover i, .social-network a.icoLinkedin:hover i {
+     color:#fff;
+}
+a.socialIcon:hover, .socialHoverClass {
+     color:#44BCDD;
+}
+
+.social-circle li a {
+     display:inline-block;
+     position:relative;
+     margin:0 auto 0 auto;
+     -moz-border-radius:50%;
+     -webkit-border-radius:50%;
+     border-radius:50%;
+     text-align:center;
+     width: 50px;
+     height: 50px;
+     font-size:20px;
+     margin-bottom: 10px;
+    
+}
+.social-circle li i {
+     margin:0;
+     line-height:50px;
+     text-align: center;
+
+}
+
+.social-circle img{
+     width:35px;
+     height:45px;
+}
+
+.social-nav img{
+     width:35px;
+     height:45px;
+}
+
+
+.social-circle li a:hover, .triggeredHover {
+     -moz-transform: rotate(360deg);
+     -webkit-transform: rotate(360deg);
+     -ms--transform: rotate(360deg);
+     transform: rotate(360deg);
+     -webkit-transition: all 0.2s;
+     -moz-transition: all 0.2s;
+     -o-transition: all 0.2s;
+     -ms-transition: all 0.2s;
+     transition: all 0.2s;
+     opacity:100%;
+}
+.social-circle i {
+     color: #fff;
+     -webkit-transition: all 0.8s;
+     -moz-transition: all 0.8s;
+     -o-transition: all 0.8s;
+     -ms-transition: all 0.8s;
+     transition: all 0.8s;
+}
+
+.social-network li a {
+ background-color: gray;
+    
+}
+
+/* Left Sidebar social icons END*/
+
+
+
+/* Video Nav */
+
+.vidctrl{
+     margin-top: 45%;
+     margin-bottom: 10%;
+     width: 100%;
+      -webkit-filter: invert(1);
+     filter: invert(1);
+     position: absolute;
+     padding-left: 7%;
+     padding-right: 7%;
+     padding-bottom: 2%;
+    
+}
+
+.half-width {
+     float: left;
+     width: 50%;
+}
+
+.half-width li {
+     padding: 0;
+}
+
+
+img.Previous{
+     height:70px;
+     -moz-transform: scaleX(-1);
+    -webkit-transform: scaleX(-1);
+    -o-transform: scaleX(-1);
+    transform: scaleX(-1);
+    -ms-filter: fliph; /*IE*/
+    filter: fliph;
+    opacity: .4;
+
+
+}
+
+img.Next{
+     height:70px;
+     opacity: .4;
+}
+
+img.Pause{
+     height:35px;
+     opacity: .4;
+}
+
+img.Music{
+     height:35px;
+     opacity: .4;
+}
+
+img.Previous:hover,img.Next:hover, img.Pause:hover,img.Music:hover{
+     opacity: 1;
+
+}
+
+@media screen and (max-width:1100px) {
+
+     .vidctrl{
+        margin-top: 50%;
+     }
+}
+
+@media screen and (max-width:700px) {
+
+     .vidctrl{
+        margin-top: 70%;
+     }
+}
+
+
+@media screen and (max-width:500px) {
+
+     .vidctrl{
+        margin-top: 80%;
+     }
+}
+
+
+/*=========================
+  Navigation End
+ ================= */
+

@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+    	<meta charset="utf-8">
+    	<meta name="Montana Day" content="A website dedicated to my dog.">
+    	<meta name="Dog's eye view, dog, fun, adventure, meditation" content="one, two, three">
+	
+		<title>Montana Day</title>
+		
+		<!-- external CSS link -->
+		<link rel="stylesheet" href="css/reset.css">
+		<link rel="stylesheet" href="css/style.css">
+		<link rel="stylesheet" href="css/animate.css">
+		<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+		<link rel="stylesheet" type="text/css" href="css/tooltipster.css" />
+		<link href='http://fonts.googleapis.com/css?family=Short+Stack' rel='stylesheet' type='text/css'>
+
+	</head>
+	<body>
+
+				
+
+		<header>
+
+		
+
+
+			
+			<div class="navicon">
+
+				<a href="#"><img class="info tooltip" src="ico/info.svg" title="Info"></a>
+
+				<a href="#"><img class="social tooltip" src="ico/bone.svg" title="Share"></a>
+
+			</div>
+
+		</header>
+
+
+
+		<main>
+			<!--Fullscreen video-->
+
+			<div class="fullscreen-bg">
+
+		    <video loop muted autoplay poster="vid/field.jpeg" class="fullscreen-bg__video">
+		       	<source class="video" src="vid/field.mp4" type="video/mp4">
+			</video>
+		</div>
+
+
+
+			<nav>
+				<div class="col-md-12">
+
+				<!--Right Sidebar Info Nav-->
+
+						<ul class="info-sidebar">
+						<h1>Hello!</h1>
+						<h2>my name is</h2>
+						<h3>Montana</h3>
+						<img src="img/montana.jpg">
+						<p>Five years ago, I decided that every Sunday should be known as "Montana Day," and since then, I have taken my owners on an adventure every single week. I take them to the beach, to the woods, to the park, you name it. I think it helps to keep them in shape, plus it gives them something to look forward to each week. Now I am sharing my Montana Day adventures with you.</p>
+						<a href="#" class="close-sidebar">Close</a>
+						</ul>
+
+				
+				<!--Left Sidebar Social Nav-->
+
+						<ul class="social-network social-circle">
+                        <li><a href="#" class="icoRss" title="Rss"><i class="fa fa-rss"></i></a></li>
+                        <li><a href="#" class="icoFacebook" title="Facebook"><i class="fa fa-facebook"></i></a></li>
+                        <li><a href="#" class="icoTwitter" title="Twitter"><i class="fa fa-twitter"></i></a></li>
+                        <li><a href="#" class="icoGoogle" title="Google +"><i class="fa fa-google-plus"></i></a></li>
+                    </ul>
+
+				</div>
+			</nav>
+		
+			<!--bottom video nav-->
+
+		<footer>
+			
+		<div class="vidctrl">
+
+			<ul class="outer-list clearfix">
+				<li class="half-width">
+					<ul>
+						<li class="alignleft">
+							<a href="#"><img class="Previous tooltip" src="ico/next.svg" title="Previous"></a>
+						</li>
+						<li class="alignright">
+							<a href="#"><img class="Pause tooltip" src="ico/pause.svg"  title="Pause"></a>
+						</li>
+					</ul>
+				</li>
+				<li class="half-width">
+					<ul>
+						<li class="alignleft">
+							<a href="#"><img class="Music tooltip" src="ico/music.svg"  title="Music"></a>
+						</li>
+						<li class="alignright">
+							<a href="#"><img class="Next tooltip" src="ico/next.svg" title="Next"></a>
+						</li>
+					</ul>			
+				</li>		
+			</ul>
+
+		</div>	
+		
+
+		</footer>
+
+		<!-- javascript -->
+		<script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+		<script src="js/main.js"></script>
+		<script type="text/javascript" src="http://code.jquery.com/jquery-1.7.0.min.js"></script>
+    	<script type="text/javascript" src="js/jquery.tooltipster.min.js"></script>
+    	<script>
+		        $(document).ready(function() {
+
+            	$('.tooltip').tooltipster({
+				   animation: 'grow',
+				   delay: 200,
+				   theme: 'tooltipster-default',
+				   touchDevices: false,
+				   trigger: 'hover'
+        });
+
+        });
+		</script>
+
+	</body>
+</html>
