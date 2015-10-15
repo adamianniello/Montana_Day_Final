@@ -70,46 +70,70 @@ $(function() {
 
 	var video=[
 	{	text:"Field",
-		src: "vid/field.mp4"
+		src: "https://dl.dropboxusercontent.com/u/91507221/Montana%20Day/Field.mp4"
 	},	
 	{   text:"Forest",
-		src: "vid/Forest.mp4",
+		src: "https://dl.dropboxusercontent.com/u/91507221/Montana%20Day/forest.mp4",
 	},
 	{   text:"Beach",
-		src: "vid/Beach.mp4",
+		src: "https://dl.dropboxusercontent.com/u/91507221/Montana%20Day/Beach.mp4",
 	},
 	{   text:"Car",
-		src: "vid/Car.mp4",
+		src: "https://dl.dropboxusercontent.com/u/91507221/Montana%20Day/car.mp4",
 	},
 	{   text:"Park",
-		src: "vid/Park.mp4",
+		src: "https://dl.dropboxusercontent.com/u/91507221/Montana%20Day/Park.mp4",
 	},
 	
 	];
 
 	var i=0;
 
+	var isMuted = true;
+
+	console.log("instantiated i: "+ i);
+
+	function getPrev() {
+		var prev= i===0 ? video.length-1 : i-1;
+		return prev;
+	}
+
 	function previousVideo(){
-		i>0 ? changeVideo(--i):0;
+		//i>0 ?//
+		changeVideo( getPrev() );
+		console.log("previous");
 		//i==0 ? changeVideo(++i):0;
 	}
 
+	function getNext() {
+		var next= i===video.length-1 ? 0 : i+1;
+		return next;
+	}
+
 	function nextVideo(){
-		i+1<video.length ? changeVideo(++i):0;
+		changeVideo( getNext() );
 		//i==1 ? changeVideo(--i):0;
+		console.log("next");
+		// TO DO: write a setSoundState(); 
 
 	}
 	
 	function changeVideo(_i){
+		console.log(video[-1]);
 		$(".fullscreen-bg__video .video").attr("src",video[_i].src);
 		i = _i;
-
+		console.log("this is i"+i)
+		console.log("this is underscore i"+_i)
 		$("video.fullscreen-bg__video").load()
 
-		//$('video.fullscreen-bg__video').prop('muted', false);
+		//Carousel re-cycle check
 
-		$("img.Next").tooltipster('content', video[_i+1].text);
-		$("img.Previous").tooltipster('content', video[_i-1].text);
+		var endOfArray= video.length-1;
+
+		
+		$("img.Next").tooltipster('content', video[ getNext()].text);
+		$("img.Previous").tooltipster('content', video[ getPrev() ].text);
+
 
 	}
 	
@@ -145,7 +169,9 @@ $(function() {
 
 
 	$("img.Music").click(function(){
-
+		//TO DO write changeSoundState();
+		//which toggles the sound, AND saves whether the sound
+		// is muted to the variable isMute;
 
     if ($('video.fullscreen-bg__video').prop('muted') )
 	{ $('video.fullscreen-bg__video').prop('muted', false);
